@@ -20,6 +20,11 @@ android {
         targetSdkVersion safeExtGet('targetSdkVersion', 28)
         versionCode 1
         versionName "1.0.0"
+
+//        manifestPlaceholders = [
+//                XG_ACCESS_ID : "注册应用的accessid",
+//                XG_ACCESS_KEY: "注册应用的accesskey",
+//        ]
     }
 
     buildTypes {
@@ -32,4 +37,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.facebook.react:react-native:+'
+    //信鸽jar，不包含厂商通道
+    implementation 'com.tencent.xinge:xinge:4.3.7-release'
+    //jg包
+    implementation 'com.tencent.jg:jg:1.1'
+    //wup包
+    implementation 'com.tencent.wup:wup:1.0.0.E-Release'
+    //mid包，minSdkVersion 14
+    implementation 'com.tencent.mid:mid:4.0.7-Release'
 }
