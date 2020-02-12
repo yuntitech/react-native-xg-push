@@ -12,7 +12,7 @@ Garden.setStyle({
 })
 
 ReactRegistry.startRegisterComponent()
-ReactRegistry.registerComponent('XgPush', () => App)
+ReactRegistry.registerComponent('XGPush', () => App)
 ReactRegistry.endRegisterComponent()
 
 Navigator.setRoot({
@@ -20,7 +20,7 @@ Navigator.setRoot({
     children: [
       {
         screen: {
-          moduleName: 'XgPush',
+          moduleName: 'XGPush',
         },
       },
     ],

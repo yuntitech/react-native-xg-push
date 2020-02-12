@@ -1,6 +1,6 @@
-#import "XgPush.h"
+#import "XGPush.h"
 
-@implementation XgPush
+@implementation XGPush
 
 RCT_EXPORT_MODULE()
 

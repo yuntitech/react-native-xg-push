@@ -4,7 +4,7 @@ import { StyleSheet, TouchableOpacity, Text, View } from 'react-native'
 export default class App extends Component {
   static navigationItem = {
     titleItem: {
-      title: 'XgPush 演示',
+      title: 'XGPush 演示',
     },
   }
 

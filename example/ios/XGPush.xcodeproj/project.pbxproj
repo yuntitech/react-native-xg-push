@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		338E411C07347D54930C264F /* libPods-XgPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B052A48D2E01EC40FB713436 /* libPods-XgPush.a */; };
+		338E411C07347D54930C264F /* libPods-XGPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B052A48D2E01EC40FB713436 /* libPods-XGPush.a */; };
 		91887264236AD544003DC79E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91887263236AD544003DC79E /* AppDelegate.m */; };
 		9188726F236AD545003DC79E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9188726E236AD545003DC79E /* Assets.xcassets */; };
 		91887272236AD545003DC79E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91887270236AD545003DC79E /* LaunchScreen.storyboard */; };
@@ -15,16 +15,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2CA22302E06A6DCA5D50A2EF /* Pods-XgPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XgPush.debug.xcconfig"; path = "Target Support Files/Pods-XgPush/Pods-XgPush.debug.xcconfig"; sourceTree = "<group>"; };
-		9188725F236AD544003DC79E /* XgPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XgPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA22302E06A6DCA5D50A2EF /* Pods-XGPush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGPush.debug.xcconfig"; path = "Target Support Files/Pods-XGPush/Pods-XGPush.debug.xcconfig"; sourceTree = "<group>"; };
+		9188725F236AD544003DC79E /* XGPush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XGPush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91887262236AD544003DC79E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		91887263236AD544003DC79E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9188726E236AD545003DC79E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91887271236AD545003DC79E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91887273236AD545003DC79E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91887274236AD545003DC79E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		96A9AF72464DC6BD73D9BF7E /* Pods-XgPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XgPush.release.xcconfig"; path = "Target Support Files/Pods-XgPush/Pods-XgPush.release.xcconfig"; sourceTree = "<group>"; };
-		B052A48D2E01EC40FB713436 /* libPods-XgPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XgPush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96A9AF72464DC6BD73D9BF7E /* Pods-XGPush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGPush.release.xcconfig"; path = "Target Support Files/Pods-XGPush/Pods-XGPush.release.xcconfig"; sourceTree = "<group>"; };
+		B052A48D2E01EC40FB713436 /* libPods-XGPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XGPush.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338E411C07347D54930C264F /* libPods-XgPush.a in Frameworks */,
+				338E411C07347D54930C264F /* libPods-XGPush.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,7 +42,7 @@
 		113DA86A31B8150F3F64C220 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B052A48D2E01EC40FB713436 /* libPods-XgPush.a */,
+				B052A48D2E01EC40FB713436 /* libPods-XGPush.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -50,7 +50,7 @@
 		91887256236AD544003DC79E = {
 			isa = PBXGroup;
 			children = (
-				91887261236AD544003DC79E /* XgPush */,
+				91887261236AD544003DC79E /* XGPush */,
 				91887260236AD544003DC79E /* Products */,
 				AB548A58EF1B8F1542F8247A /* Pods */,
 				113DA86A31B8150F3F64C220 /* Frameworks */,
@@ -60,12 +60,12 @@
 		91887260236AD544003DC79E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9188725F236AD544003DC79E /* XgPush.app */,
+				9188725F236AD544003DC79E /* XGPush.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		91887261236AD544003DC79E /* XgPush */ = {
+		91887261236AD544003DC79E /* XGPush */ = {
 			isa = PBXGroup;
 			children = (
 				91887262236AD544003DC79E /* AppDelegate.h */,
@@ -75,14 +75,14 @@
 				91887273236AD545003DC79E /* Info.plist */,
 				91887274236AD545003DC79E /* main.m */,
 			);
-			path = XgPush;
+			path = XGPush;
 			sourceTree = "<group>";
 		};
 		AB548A58EF1B8F1542F8247A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CA22302E06A6DCA5D50A2EF /* Pods-XgPush.debug.xcconfig */,
-				96A9AF72464DC6BD73D9BF7E /* Pods-XgPush.release.xcconfig */,
+				2CA22302E06A6DCA5D50A2EF /* Pods-XGPush.debug.xcconfig */,
+				96A9AF72464DC6BD73D9BF7E /* Pods-XGPush.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -91,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9188725E236AD544003DC79E /* XgPush */ = {
+		9188725E236AD544003DC79E /* XGPush */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91887278236AD545003DC79E /* Build configuration list for PBXNativeTarget "XgPush" */;
+			buildConfigurationList = 91887278236AD545003DC79E /* Build configuration list for PBXNativeTarget "XGPush" */;
 			buildPhases = (
 				1CE892CE82A27C2E2EB01E98 /* [CP] Check Pods Manifest.lock */,
 				9188725B236AD544003DC79E /* Sources */,
@@ -105,9 +105,9 @@
 			);
 			dependencies = (
 			);
-			name = XgPush;
-			productName = XgPush;
-			productReference = 9188725F236AD544003DC79E /* XgPush.app */;
+			name = XGPush;
+			productName = XGPush;
+			productReference = 9188725F236AD544003DC79E /* XGPush.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9188725A236AD544003DC79E /* Build configuration list for PBXProject "XgPush" */;
+			buildConfigurationList = 9188725A236AD544003DC79E /* Build configuration list for PBXProject "XGPush" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9188725E236AD544003DC79E /* XgPush */,
+				9188725E236AD544003DC79E /* XGPush */,
 			);
 		};
 /* End PBXProject section */
@@ -170,7 +170,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-XgPush-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-XGPush-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -333,11 +333,11 @@
 		};
 		91887279236AD545003DC79E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA22302E06A6DCA5D50A2EF /* Pods-XgPush.debug.xcconfig */;
+			baseConfigurationReference = 2CA22302E06A6DCA5D50A2EF /* Pods-XGPush.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = XgPush/Info.plist;
+				INFOPLIST_FILE = XGPush/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,11 +351,11 @@
 		};
 		9188727A236AD545003DC79E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96A9AF72464DC6BD73D9BF7E /* Pods-XgPush.release.xcconfig */;
+			baseConfigurationReference = 96A9AF72464DC6BD73D9BF7E /* Pods-XGPush.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = XgPush/Info.plist;
+				INFOPLIST_FILE = XGPush/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,7 +370,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9188725A236AD544003DC79E /* Build configuration list for PBXProject "XgPush" */ = {
+		9188725A236AD544003DC79E /* Build configuration list for PBXProject "XGPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91887276236AD545003DC79E /* Debug */,
@@ -379,7 +379,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91887278236AD545003DC79E /* Build configuration list for PBXNativeTarget "XgPush" */ = {
+		91887278236AD545003DC79E /* Build configuration list for PBXNativeTarget "XGPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91887279236AD545003DC79E /* Debug */,

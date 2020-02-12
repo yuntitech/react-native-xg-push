@@ -1,5 +1,5 @@
 import { NativeModules } from 'react-native'
 
-const { XgPush } = NativeModules
+const { XGPush } = NativeModules
 
-export default XgPush
+export default XGPush

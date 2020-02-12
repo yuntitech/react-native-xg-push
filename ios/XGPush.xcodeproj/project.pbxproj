@@ -7,7 +7,7 @@
   objects = {
 
 /* Begin PBXBuildFile section */
-    91C884A6202C3E8600EC0A20 /* XgPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C884A1202C3E8600EC0A20 /* XgPush.m */; };
+    91C884A6202C3E8600EC0A20 /* XGPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C884A1202C3E8600EC0A20 /* XGPush.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-    910362D21FE9318600F4DA8E /* libXgPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXgPush.a; sourceTree = BUILT_PRODUCTS_DIR; };
-    91C884A1202C3E8600EC0A20 /* XgPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XgPush.m; sourceTree = "<group>"; };
-    91C884A2202C3E8600EC0A20 /* XgPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XgPush.h; sourceTree = "<group>"; };
+    910362D21FE9318600F4DA8E /* libXGPush.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libXGPush.a; sourceTree = BUILT_PRODUCTS_DIR; };
+    91C884A1202C3E8600EC0A20 /* XGPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XGPush.m; sourceTree = "<group>"; };
+    91C884A2202C3E8600EC0A20 /* XGPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XGPush.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
     910362C91FE9318600F4DA8E = {
       isa = PBXGroup;
       children = (
-        910362D41FE9318600F4DA8E /* XgPush */,
+        910362D41FE9318600F4DA8E /* XGPush */,
         910362D31FE9318600F4DA8E /* Products */,
       );
       sourceTree = "<group>";
@@ -50,26 +50,26 @@
     910362D31FE9318600F4DA8E /* Products */ = {
       isa = PBXGroup;
       children = (
-        910362D21FE9318600F4DA8E /* libXgPush.a */,
+        910362D21FE9318600F4DA8E /* libXGPush.a */,
       );
       name = Products;
       sourceTree = "<group>";
     };
-    910362D41FE9318600F4DA8E /* XgPush */ = {
+    910362D41FE9318600F4DA8E /* XGPush */ = {
       isa = PBXGroup;
       children = (
-        91C884A2202C3E8600EC0A20 /* XgPush.h */,
-        91C884A1202C3E8600EC0A20 /* XgPush.m */,
+        91C884A2202C3E8600EC0A20 /* XGPush.h */,
+        91C884A1202C3E8600EC0A20 /* XGPush.m */,
       );
-      path = XgPush;
+      path = XGPush;
       sourceTree = "<group>";
     };
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-    910362D11FE9318600F4DA8E /* XgPush */ = {
+    910362D11FE9318600F4DA8E /* XGPush */ = {
       isa = PBXNativeTarget;
-      buildConfigurationList = 910362DB1FE9318600F4DA8E /* Build configuration list for PBXNativeTarget "XgPush" */;
+      buildConfigurationList = 910362DB1FE9318600F4DA8E /* Build configuration list for PBXNativeTarget "XGPush" */;
       buildPhases = (
         910362CE1FE9318600F4DA8E /* Sources */,
         910362CF1FE9318600F4DA8E /* Frameworks */,
@@ -79,9 +79,9 @@
       );
       dependencies = (
       );
-      name = XgPush;
-      productName = XgPush;
-      productReference = 910362D21FE9318600F4DA8E /* libXgPush.a */;
+      name = XGPush;
+      productName = XGPush;
+      productReference = 910362D21FE9318600F4DA8E /* libXGPush.a */;
       productType = "com.apple.product-type.library.static";
     };
 /* End PBXNativeTarget section */
@@ -99,7 +99,7 @@
           };
         };
       };
-      buildConfigurationList = 910362CD1FE9318600F4DA8E /* Build configuration list for PBXProject "XgPush" */;
+      buildConfigurationList = 910362CD1FE9318600F4DA8E /* Build configuration list for PBXProject "XGPush" */;
       compatibilityVersion = "Xcode 8.0";
       developmentRegion = en;
       hasScannedForEncodings = 0;
@@ -111,7 +111,7 @@
       projectDirPath = "";
       projectRoot = "";
       targets = (
-        910362D11FE9318600F4DA8E /* XgPush */,
+        910362D11FE9318600F4DA8E /* XGPush */,
       );
     };
 /* End PBXProject section */
@@ -121,7 +121,7 @@
       isa = PBXSourcesBuildPhase;
       buildActionMask = 2147483647;
       files = (
-        91C884A6202C3E8600EC0A20 /* XgPush.m in Sources */,
+        91C884A6202C3E8600EC0A20 /* XGPush.m in Sources */,
       );
       runOnlyForDeploymentPostprocessing = 0;
     };
@@ -259,7 +259,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-    910362CD1FE9318600F4DA8E /* Build configuration list for PBXProject "XgPush" */ = {
+    910362CD1FE9318600F4DA8E /* Build configuration list for PBXProject "XGPush" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
         910362D91FE9318600F4DA8E /* Debug */,
@@ -268,7 +268,7 @@
       defaultConfigurationIsVisible = 0;
       defaultConfigurationName = Release;
     };
-    910362DB1FE9318600F4DA8E /* Build configuration list for PBXNativeTarget "XgPush" */ = {
+    910362DB1FE9318600F4DA8E /* Build configuration list for PBXNativeTarget "XGPush" */ = {
       isa = XCConfigurationList;
       buildConfigurations = (
         910362DC1FE9318600F4DA8E /* Debug */,

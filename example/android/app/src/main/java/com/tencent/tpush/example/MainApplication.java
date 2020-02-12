@@ -12,7 +12,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import com.navigationhybrid.ReactBridgeManager;
-import com.tencent.tpush.XgPushPackage;
+import com.tencent.tpush.XGPushPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -27,7 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
 			protected List<ReactPackage> getPackages() {
 				@SuppressWarnings("UnnecessaryLocalVariable")
 				List<ReactPackage> packages = new PackageList(this).getPackages();
-				packages.add(new XgPushPackage());
+				packages.add(new XGPushPackage());
 				return packages;
 			}
 
