@@ -40,6 +40,14 @@ class XGTencentPush {
   }
 
   /**
+   * 是否开启debug模式，即输出logcat日志重要：为保证数据的安全性，发布前必须设置为false）
+   * @param debugMode 调试模式
+   */
+  public enableDebug(debugMode: boolean) {
+    XGPushModule.enableDebug(debugMode)
+  }
+
+  /**
    * 原生事件处理注册
    */
   public nativeEvents(): NativeEventsRegistry {

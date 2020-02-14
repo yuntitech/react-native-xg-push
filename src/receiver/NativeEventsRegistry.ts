@@ -25,6 +25,18 @@ export class NativeEventsRegistry {
     }
   }
 
+  /**
+   * 通知点击处理回调
+   * 此处做点击消息跳转
+   *
+   * @param callback XGPushClickedResult 通知被打开的对象
+   */
+  public addNotifactionClickListener(
+    callback: (data: XGPushClickedResult) => void,
+  ): EmitterSubscription {
+    return this.emitter.addListener('onNotifactionClick', callback)
+  }
+
   // 通知展示
   public addNotifactionShowedResultListener(
     callback: (data: XGPushShowedResult) => void,

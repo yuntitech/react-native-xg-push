@@ -3,7 +3,6 @@ package com.tencent.tpush.receiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -13,10 +12,9 @@ import com.tencent.android.tpush.XGPushRegisterResult;
 import com.tencent.android.tpush.XGPushShowedResult;
 import com.tencent.android.tpush.XGPushTextMessage;
 import com.tencent.tpush.XGPushModule;
+import com.tencent.tpush.bean.XGPushResultConvert;
 
 public class MessageReceiver extends XGPushBaseReceiver {
-    private Intent intent = new Intent("com.qq.xgdemo.activity.UPDATE_LISTVIEW");
-    public static final String LogTag = "TPushReceiver";
 
     // 通知展示
     @Override
@@ -72,15 +70,8 @@ public class MessageReceiver extends XGPushBaseReceiver {
     @Override
     public void onNotifactionClickedResult(Context context,
                                            XGPushClickedResult pushClickedResult) {
-        Bundle data = new Bundle();
-        data.putLong("msgId", pushClickedResult.getMsgId());
-        data.putString("title", pushClickedResult.getTitle());
-        data.putString("content", pushClickedResult.getContent());
-        data.putString("activityName", pushClickedResult.getActivityName());
-        data.putInt("notificationActionType", pushClickedResult.getNotificationActionType());
-        data.putString("customContent", pushClickedResult.getCustomContent());
-        data.putLong("actionType", pushClickedResult.getActionType());
-        sendBroadcast(context, "onNotifactionShowedResult", data);
+        sendBroadcast(context, "onNotifactionShowedResult",
+                XGPushResultConvert.fromXGPushClickedResult(pushClickedResult));
     }
 
     //注册的回调
@@ -99,13 +90,11 @@ public class MessageReceiver extends XGPushBaseReceiver {
         } else {
             text = message + "注册失败错误码：" + errorCode;
         }
-        Log.d(LogTag, text);
     }
 
     // 消息透传的回调
     @Override
     public void onTextMessage(Context context, XGPushTextMessage message) {
-
     }
 
     private void sendBroadcast(Context context, String eventName, Bundle data) {

@@ -1,31 +1,30 @@
 package com.tencent.tpush;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.facebook.react.bridge.ActivityEventListener;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 import com.tencent.android.tpush.XGIOperateCallback;
 import com.tencent.android.tpush.XGPushClickedResult;
+import com.tencent.android.tpush.XGPushConfig;
 import com.tencent.android.tpush.XGPushManager;
-import com.tencent.android.tpush.XGPushShowedResult;
-import com.tencent.android.tpush.common.Constants;
+import com.tencent.tpush.bean.XGPushResultConvert;
 
-public class XGPushModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
+public class XGPushModule extends ReactContextBaseJavaModule implements LifecycleEventListener,
+        ActivityEventListener {
 
     public static final String NAME = "XGPush";
     private final ReactApplicationContext reactContext;
@@ -47,6 +46,7 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
         super(reactContext);
         this.reactContext = reactContext;
         reactContext.addLifecycleEventListener(this);
+        reactContext.addActivityEventListener(this);
     }
 
     @Override
@@ -69,7 +69,6 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
                 .unregisterReceiver(mBroadcastReceiver);
         super.onCatalystInstanceDestroy();
     }
-
 
     //注册信鸽服务的接口
     @ReactMethod
@@ -116,9 +115,19 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
         promise.resolve(XGPushManager.isNotificationOpened(getReactApplicationContext()));
     }
 
+    @ReactMethod
+    public void enableDebug(boolean debugMode) {
+        XGPushConfig.enableDebug(getReactApplicationContext(), debugMode);
+    }
+
+
     @Override
     public void onHostResume() {
-        XGPushManager.onActivityStarted(getCurrentActivity());
+        XGPushClickedResult click = XGPushManager.onActivityStarted(getCurrentActivity());
+        if (click != null) {
+            mDeviceEventEmitter.emit("onNotifactionClick",
+                    Arguments.fromBundle(XGPushResultConvert.fromXGPushClickedResult(click)));
+        }
     }
 
     @Override
@@ -129,5 +138,17 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
     @Override
     public void onHostDestroy() {
 
+    }
+
+    @Override
+    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
+
+    }
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        if (getCurrentActivity() != null) {
+            getCurrentActivity().setIntent(intent);
+        }
     }
 }
