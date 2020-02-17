@@ -1,12 +1,3 @@
-export interface RegisterResult {
-  //设备token
-  token: string
-  //失败错误码
-  errCode?: number
-  //失败错误信息
-  msg?: string
-}
-
 export interface XGPushClickedResult extends XGPushCommonResult {
   //消息id
   msgId: number

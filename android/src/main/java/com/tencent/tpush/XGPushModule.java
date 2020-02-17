@@ -73,29 +73,37 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
     //注册信鸽服务的接口
     @ReactMethod
     public void registerPush(Promise promise) {
-        XGPushManager.registerPush(getReactApplicationContext(),
-                new XGIOperateCallback() {
-
-                    @Override
-                    public void onSuccess(Object data, int flag) {
-                        promise.resolve(createResult(data));
-                    }
-
-                    @Override
-                    public void onFail(Object data, int errCode, String msg) {
-                        WritableMap result = createResult(data);
-                        result.putInt("errCode", errCode);
-                        result.putString("msg", msg);
-                        promise.resolve(result);
-                    }
-
-                    private WritableMap createResult(Object token) {
-                        WritableMap result = Arguments.createMap();
-                        result.putString("token", "" + token);
-                        return result;
-                    }
-                });
+        XGPushManager.registerPush(getReactApplicationContext(), new XGIOperateCallbackImpl(promise));
     }
+
+    /**
+     * 启动并注册APP，同时绑定账号,
+     * 推荐有帐号体系的APP使用
+     * （3.2.2以及3.2.2之后的版本使用，
+     * 此接口会覆盖设备之前绑定过的账号，仅当前注册的账号生效）
+     *
+     * @param account 账号
+     */
+    @ReactMethod
+    public void bindAccount(String account, Promise promise) {
+        XGPushManager.bindAccount(getReactApplicationContext(), account,
+                new XGIOperateCallbackImpl(promise));
+    }
+
+    /**
+     * 解绑指定账号（3.2.2以及3.2.2之后的版本使用，有注册回调）
+     *
+     * @param account 账号
+     */
+    @ReactMethod
+    void delAccount(
+            final String account,
+            Promise promise
+    ) {
+        XGPushManager.delAccount(getReactApplicationContext(), account,
+                new XGIOperateCallbackImpl(promise));
+    }
+
 
     //设置标签
     @ReactMethod
@@ -149,6 +157,28 @@ public class XGPushModule extends ReactContextBaseJavaModule implements Lifecycl
     public void onNewIntent(Intent intent) {
         if (getCurrentActivity() != null) {
             getCurrentActivity().setIntent(intent);
+        }
+    }
+
+
+    class XGIOperateCallbackImpl implements XGIOperateCallback {
+
+        Promise mPromise;
+
+        XGIOperateCallbackImpl(Promise promise) {
+            mPromise = promise;
+        }
+
+        @Override
+        public void onSuccess(Object data, int flag) {
+            WritableMap result = Arguments.createMap();
+            result.putString("token", "" + data);
+            mPromise.resolve(result);
+        }
+
+        @Override
+        public void onFail(Object data, int errCode, String msg) {
+            mPromise.reject(String.valueOf(errCode), msg);
         }
     }
 }

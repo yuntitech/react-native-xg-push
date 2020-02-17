@@ -1,7 +1,8 @@
 import { NativeModules } from 'react-native'
 const XGPushModule = NativeModules.XGPush
-import { RegisterResult } from './interfaces/Results'
 import { NativeEventsRegistry } from './receiver/NativeEventsRegistry'
+import { retry } from './utils/utils'
+
 class XGTencentPush {
   private readonly nativeEventsRegistry: NativeEventsRegistry
 
@@ -12,8 +13,27 @@ class XGTencentPush {
   /**
    * 启动并注册
    */
-  public registerPush(): Promise<RegisterResult> {
-    return XGPushModule.registerPush()
+  public registerPush(): Promise<string> {
+    return retry(XGPushModule.registerPush)
+  }
+
+  /**
+   * 启动并注册APP，同时绑定账号,
+   推荐有帐号体系的APP使用
+   （3.2.2以及3.2.2之后的版本使用，
+   此接口会覆盖设备之前绑定过的账号，仅当前注册的账号生效）
+   */
+  public bindAccount(account: string): Promise<string> {
+    return retry(XGPushModule.bindAccount, account)
+  }
+
+  /**
+   * 解绑指定账号（3.2.2以及3.2.2之后的版本使用，有注册回调）
+   *
+   * @param account 账号
+   */
+  public delAccount(account: string): Promise<string> {
+    return retry(XGPushModule.delAccount, account)
   }
 
   /**

@@ -95,6 +95,8 @@ public class MessageReceiver extends XGPushBaseReceiver {
     // 消息透传的回调
     @Override
     public void onTextMessage(Context context, XGPushTextMessage message) {
+        sendBroadcast(context, "onTextMessage",
+                XGPushResultConvert.fromXGPushTextMessage(message));
     }
 
     private void sendBroadcast(Context context, String eventName, Bundle data) {
